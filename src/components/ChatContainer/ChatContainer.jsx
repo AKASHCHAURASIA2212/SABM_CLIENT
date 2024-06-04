@@ -29,7 +29,7 @@ function ChatContainer() {
     let { id, item_id } = useParams();
     let sellerId = id;
     let buyerId = user_id;
-    // console.log(sellerId, buyerId, item_id);
+    // // console.log(sellerId, buyerId, item_id);
 
     let chat_data = { sender: buyerId, receiver: sellerId, item_id, user_id };
 
@@ -49,7 +49,7 @@ function ChatContainer() {
                 }
             }).then(res => res.json())
                 .then((data) => {
-                    // console.log("chat present ", data.data);
+                    // // console.log("chat present ", data.data);
                     if (data.data.length != 0) {
                         fetchChatData();
                     }

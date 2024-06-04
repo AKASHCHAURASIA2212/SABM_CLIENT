@@ -10,7 +10,7 @@ function ChatBox({ user_data }) {
     const isMobile = window.innerWidth <= 640;
 
     const openChatArea = (chatId) => {
-        // console.log("user_data chatbox", user_data);
+        // // console.log("user_data chatbox", user_data);
         navigate(`${chatId}`)
     }
 
@@ -21,7 +21,7 @@ function ChatBox({ user_data }) {
             openChatArea(chatId)
         }
     }
-    console.log(user_data);
+    // console.log(user_data);
     return (
 
         <div className="flex min-w-full flex-col font-sans text-base font-normal text-blue-gray-700 h-full">

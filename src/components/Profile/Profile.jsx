@@ -13,7 +13,7 @@ const Profile = () => {
 
     let userId = localStorage.getItem('user_id');
     let token = localStorage.getItem("token");
-    // console.log(userId);
+    // // console.log(userId);
     let { isLogin, setIsLogin } = useContext(MyContext)
     const [loading, setLoading] = useState(false);
     const [user_data, setUserData] = useState([])
@@ -32,10 +32,10 @@ const Profile = () => {
                 }
             }).then(res => res.json())
                 .then((data) => {
-                    // console.log(data.data[0]);
+                    // // console.log(data.data[0]);
                     setUserData(data.data)
                 }).catch((e) => {
-                    // console.log(e);
+                    console.log(e);
                 })
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -56,7 +56,7 @@ const Profile = () => {
 
                 }
             );
-            // // console.log(response.data);
+            // // // console.log(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
         }

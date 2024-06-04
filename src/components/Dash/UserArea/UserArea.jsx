@@ -36,7 +36,7 @@ function UserArea() {
             }
         }).then(res => res.json())
             .then((data) => {
-                // console.log(data.data.userData.res);
+                // // console.log(data.data.userData.res);
                 settotalCount(data.data.userData.totalCount)
                 setUserData(data.data.userData.res)
 
@@ -48,7 +48,7 @@ function UserArea() {
 
     const handleDelete = async (userId) => {
         // e.preventDefault();
-        // console.log("handle Delete : ", userId);
+        // // console.log("handle Delete : ", userId);
         setIsLoading(true)
 
         let url = `${api_url}/api/admin/user/delete`;

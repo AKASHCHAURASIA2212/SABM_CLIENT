@@ -14,7 +14,7 @@ function ChatHandler({ data, setRefresh }) {
     let token = localStorage.getItem("token");
 
 
-    console.log(data);
+    // console.log(data);
 
     let { id, item_id } = useParams();
 
@@ -30,7 +30,7 @@ function ChatHandler({ data, setRefresh }) {
         }).then(res => res.json())
             .then((userData) => {
                 let userdata = userData.data.data;
-                console.log(userdata);
+                // console.log(userdata);
                 return userdata
             }).catch((e) => {
                 console.log(e);
@@ -51,7 +51,7 @@ function ChatHandler({ data, setRefresh }) {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        // console.log(name, value);
+        // // console.log(name, value);
         setFormData((prevData) => ({
             ...prevData,
             [name]: value
@@ -71,7 +71,7 @@ function ChatHandler({ data, setRefresh }) {
             }
         }).then(res => res.json())
             .then((data) => {
-                // console.log(data);
+                // // console.log(data);
 
                 setRefresh(true);
 
@@ -95,7 +95,7 @@ function ChatHandler({ data, setRefresh }) {
         getUser()
     }, [data])
 
-    console.log(senderData, receiverData);
+    // console.log(senderData, receiverData);
 
     return (
         <div className='w-full flex flex-col justify-center items-center h-full'>

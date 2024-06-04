@@ -11,7 +11,7 @@ const AddPost = () => {
     let token = localStorage.getItem("token");
 
 
-    console.log("user_id : ", user_id);
+    // console.log("user_id : ", user_id);
     const [formData, setFormData] = useState({
         item_category: '',
         item_name: '',
@@ -56,7 +56,7 @@ const AddPost = () => {
         }
         try {
 
-            console.log(data);
+            // console.log(data);
             let url = `${api_url}/api/items/add`
 
             let result = await fetch(url, {
@@ -69,7 +69,7 @@ const AddPost = () => {
                 }
             }).then(res => res.json())
                 .then((data) => {
-                    console.log(data);
+                    // console.log(data);
                 }).catch((e) => {
                     console.log(e);
                 })

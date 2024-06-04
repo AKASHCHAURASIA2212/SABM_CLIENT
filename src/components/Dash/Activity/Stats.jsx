@@ -5,7 +5,7 @@ import { IoMdMail } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 function Stats({ data }) {
-    // console.log(data);
+    // // console.log(data);
 
     return (
         <div>

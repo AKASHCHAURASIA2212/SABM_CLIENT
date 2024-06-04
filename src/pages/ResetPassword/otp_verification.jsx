@@ -39,7 +39,7 @@ const OTP_Varify = () => {
             }
         }).then(res => res.json())
             .then((data) => {
-                console.log(data.data);
+                // console.log(data.data);
                 if (data.data.status) {
                     setMessage("OTP Varified");
                     setTimeout(() => {

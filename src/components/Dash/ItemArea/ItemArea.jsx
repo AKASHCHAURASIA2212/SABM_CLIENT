@@ -107,7 +107,7 @@ function ItemArea() {
             rejected_by: user_id
         }
 
-        // console.log(data);
+        // // console.log(data);
 
         let result = await fetch(url, {
             method: "POST",

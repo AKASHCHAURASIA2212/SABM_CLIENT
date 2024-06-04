@@ -20,7 +20,7 @@ const Listing = ({ title = "Latest Items" }) => {
     }, 2000)
 
     let { cat, id } = useParams();
-    console.log(cat, id);
+    // console.log(cat, id);
     let [categorylist, setcategorylist] = useState([]);
     let [itemsdata, setItemsData] = useState([]);
     let [page, setPage] = useState(1);
@@ -33,7 +33,7 @@ const Listing = ({ title = "Latest Items" }) => {
 
     const fetchData = async (url) => {
         try {
-            console.log(url);
+            // console.log(url);
             await fetch(url, {
                 method: "GET",
                 // body: JSON.stringify(formData),
@@ -43,7 +43,7 @@ const Listing = ({ title = "Latest Items" }) => {
                 }
             }).then(res => res.json())
                 .then((response) => {
-                    console.log(response);
+                    // console.log(response);
                     let result = response.data;
                     settotalCount(result.totalCount)
                     setItemsData(result.res)
@@ -63,7 +63,7 @@ const Listing = ({ title = "Latest Items" }) => {
         }
         cat = cat.toLowerCase();
         fetchData(`${api_url}/api/items/${page}/${limit}/${search}/${cat}`)
-        console.log('useeffect');
+        // console.log('useeffect');
     }, [page, search]);
 
     const list = [

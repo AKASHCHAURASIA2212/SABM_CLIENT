@@ -35,7 +35,7 @@ function Notify() {
             }
         }).then(res => res.json())
             .then((data) => {
-                // // console.log(data);
+                // // // console.log(data);
                 setMailData(data.data.allMail)
                 settotalCount(data.data.totalCount)
 
@@ -67,7 +67,7 @@ function Notify() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         formData.email = replyTo;
-        console.log(formData);
+        // console.log(formData);
         let url = `${api_url}/api/mail/send`
 
         await fetch(url, {
@@ -79,11 +79,11 @@ function Notify() {
             }
         }).then(res => res.json())
             .then((data) => {
-                // console.log(data);
+                // // console.log(data);
                 // navigate('/')
 
             }).catch((e) => {
-                // console.log(e);
+                console.log(e);
             })
 
     };

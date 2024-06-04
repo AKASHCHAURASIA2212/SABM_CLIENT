@@ -35,7 +35,7 @@ function Panel() {
                     mailCount: data.data.mailData.totalCount,
                 }
 
-                // console.log(totalCount);
+                // // console.log(totalCount);
                 setStates(totalCount)
                 let allData = {
                     userData: data.data.userData.res,
@@ -43,7 +43,7 @@ function Panel() {
                     mailData: data.data.mailData.res,
                 }
 
-                // console.log(allData);
+                // // console.log(allData);
                 setActivity(allData)
             }).catch((e) => {
                 console.log(e);

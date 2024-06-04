@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import userLogo from '../../../asset/images/user.png'
 import box_logo from '../../../asset/images/box.webp'
 function Activity({ data }) {
-    // console.log(data);
+    // // console.log(data);
     return (
         <div className='mt-2'>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:pt-10 md:mt-12 lg:grid-cols-3">

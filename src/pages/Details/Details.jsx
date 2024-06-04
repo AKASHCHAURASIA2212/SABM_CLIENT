@@ -21,7 +21,7 @@ const Details = () => {
 
     let { cat, id } = useParams();
     let navigate = useNavigate();
-    // console.log(cat, id);
+    // // console.log(cat, id);
     const user_id = localStorage.getItem('user_id')
     let token = localStorage.getItem("token");
 
@@ -41,7 +41,7 @@ const Details = () => {
                 }
             }).then(res => res.json())
                 .then((data) => {
-                    console.log(data.data[0]);
+                    // console.log(data.data[0]);
                     setItems(data.data[0])
 
                 }).catch((e) => {
